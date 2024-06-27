@@ -1,5 +1,6 @@
 package com.example.newsapp
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
@@ -23,7 +24,10 @@ class NewsAdapter(val articles:List<Article>):RecyclerView.Adapter<NewsAdapter.A
                 .into(newsImage)
 //            set a onclick listener to the item to display a toast of the title
             root.setOnClickListener {
-                Toast.makeText(root.context,article.title,Toast.LENGTH_SHORT).show()
+                val intent=Intent(root.context,DetailActivity::class.java)
+                intent.putExtra("URL",article.url)
+                root.context.startActivity(intent)
+//                Toast.makeText(root.context,article.title,Toast.LENGTH_SHORT).show()
             }
         }
 
