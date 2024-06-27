@@ -11,14 +11,14 @@ import retrofit2.http.Query
 //https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=88aa697c44d641e0b4e2863d18d17abd
 //https://newsapi.org/v2/everything?domains=wsj.com&apiKey=88aa697c44d641e0b4e2863d18d17abd
 const val BASE_URL="https://newsapi.org/"
-const val API_KEY="88aa697c44d641e0b4e2863d18d17abd"
+const val API_KEY="3fee3cf7353f479b9450f8ac51e612e5"
 interface NewsInterface{
 //    define all the methods we need
 //    String for the api request and page to store which page is used
     @GET("v2/top-headlines?apiKey=$API_KEY&category=business")
     fun getHeadline(@Query("country")country:String,@Query("page")page:Int): Call<News>
-        // url base https://newsapi.org/v2/top-headlines?apiKey=88aa697c44d641e0b4e2863d18d17abd&country=in&page=1
-        // url base https://newsapi.org/v2/top-headlines?apiKey=88aa697c44d641e0b4e2863d18d17abd&country=in&page=1&category=business
+        // url base https://newsapi.org/v2/top-headlines?apiKey=3fee3cf7353f479b9450f8ac51e612e5&country=in&page=1
+        // url base https://newsapi.org/v2/top-headlines?apiKey=3fee3cf7353f479b9450f8ac51e612e5&country=in&page=1&category=business
 
 //    creating two class Article and News
 }
